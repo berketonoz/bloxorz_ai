@@ -22,7 +22,6 @@ class Maze:
                     return goal
                 counter += 1
                 temporary = temporary.next
-
     def setup(self,lines):
         for i in range(len(lines)):                 #O(row)
             lines[i] = lines[i].replace("\n","")
@@ -58,7 +57,6 @@ class Maze:
                 temp_n = temp_n.next
             temp = temp.down
             print()
-
 class Node:
     def __init__(self,data):
         self.data = data
