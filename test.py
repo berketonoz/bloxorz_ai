@@ -19,4 +19,8 @@ tree = tree.Tree(tree_node)
 
 tree.setup(tree.root,player,goal_cord,"",map_d.GetHeads(),[])
 
+print("Have any solution been found? Lets see...")
+
+tree.SearchSolution(tree.root,[])
+
 print("done!")
