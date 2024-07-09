@@ -1,10 +1,12 @@
+"""imported modules"""
 import heapq
-from node import Node
 
 def heuristic(node, goal):
+    """Heuristic calculation of total distance to goal"""
     return abs(node.x - goal.x) + abs(node.y - goal.y)
 
 def a_star_search(maze, start, goal):
+    """a star search algorithm implementation"""
     open_set = []
     heapq.heappush(open_set, (0, start))
     came_from = {}
@@ -30,6 +32,7 @@ def a_star_search(maze, start, goal):
     return []
 
 def reconstruct_path(came_from, current):
+    """function for path recovery"""
     path = []
     while current in came_from:
         path.append((current.x, current.y, current.orientation))

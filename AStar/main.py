@@ -1,3 +1,4 @@
+"""imported modules"""
 from node import Node
 from maze import Maze
 from a_star_search import a_star_search
@@ -5,21 +6,22 @@ from a_star_search import a_star_search
 # Grid from sample.txt
 grid = [
     '############',
-    '#S...######.',
-    '#.....###...',
-    '#.......###.',
-    '##......###.',
+    '#S...#######',
+    '#.....######',
+    '#.......####',
+    '##......####',
     '#####..G####',
-    '######.###..',
+    '######.#####',
     '############'
 ]
 
 def main():
+    """main function"""
     # Find the start and goal coordinates from the grid
     start_x, start_y = None, None
     goal_x, goal_y = None, None
-    for i in range(len(grid)):
-        for j in range(len(grid[0])):
+    for i,_ in enumerate(grid):
+        for j,_ in enumerate(grid[0]):
             if grid[i][j] == 'S':
                 start_x, start_y = i, j
             elif grid[i][j] == 'G':
