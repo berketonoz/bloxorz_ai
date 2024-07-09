@@ -1,5 +1,6 @@
 from node import Node
 
+
 class Maze:
     def __init__(self, grid):
         self.grid = grid
@@ -9,8 +10,10 @@ class Maze:
     def is_valid(self, x, y):
         return 0 <= x < self.rows and 0 <= y < self.cols and self.grid[x][y] != '#'
 
+
     def is_goal(self, x, y):
         return self.grid[x][y] == 'G'
+
 
     def get_neighbors(self, node):
         neighbors = []
@@ -63,3 +66,4 @@ class Maze:
                     neighbors.append(Node(nx, y, new_orientation, move, node))
 
         return neighbors
+    
