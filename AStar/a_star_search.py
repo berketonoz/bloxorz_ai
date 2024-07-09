@@ -35,7 +35,7 @@ def reconstruct_path(came_from, current):
     """function for path recovery"""
     path = []
     while current in came_from:
-        path.append((current.x, current.y, current.orientation))
+        path.append((current.x, current.y, current.orientation, current.move))
         current = came_from[current]
     path.reverse()
     return path

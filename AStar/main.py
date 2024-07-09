@@ -6,7 +6,7 @@ from a_star_search import a_star_search
 # Grid from sample.txt
 grid = [
     '############',
-    '#S...#######',
+    '#.S..#######',
     '#.....######',
     '#.......####',
     '##......####',
@@ -14,6 +14,7 @@ grid = [
     '######.#####',
     '############'
 ]
+
 
 def main():
     """main function"""
